@@ -1,0 +1,51 @@
+# Geotechnicalengineering — Prince George
+
+> Geotechnical engineering services in Prince George, Canada.
+
+## Services
+- [Anchors](https://prince-george.geotechnicalengineering.vip/anchors/)
+- [Atterberg Limits](https://prince-george.geotechnicalengineering.vip/atterberg-limits/)
+- [Cbr Road](https://prince-george.geotechnicalengineering.vip/cbr-road/)
+- [Cpt Test](https://prince-george.geotechnicalengineering.vip/cpt-test/)
+- [Deep Excavations](https://prince-george.geotechnicalengineering.vip/deep-excavations/)
+- [Excavation Monitoring](https://prince-george.geotechnicalengineering.vip/excavation-monitoring/)
+- [Excavations](https://prince-george.geotechnicalengineering.vip/excavations/)
+- [Flexible Pavement](https://prince-george.geotechnicalengineering.vip/flexible-pavement/)
+- [Footings](https://prince-george.geotechnicalengineering.vip/footings/)
+- [Foundations](https://prince-george.geotechnicalengineering.vip/foundations/)
+- [Grain Size](https://prince-george.geotechnicalengineering.vip/grain-size/)
+- [Ground Improvement](https://prince-george.geotechnicalengineering.vip/ground-improvement/)
+- [Grouting](https://prince-george.geotechnicalengineering.vip/grouting/)
+- [In Situ Permeability](https://prince-george.geotechnicalengineering.vip/in-situ-permeability/)
+- [Investigation](https://prince-george.geotechnicalengineering.vip/investigation/)
+- [Lab In Situ](https://prince-george.geotechnicalengineering.vip/lab-in-situ/)
+- [Laboratory](https://prince-george.geotechnicalengineering.vip/laboratory/)
+- [Liquefaction](https://prince-george.geotechnicalengineering.vip/liquefaction/)
+- [Masw](https://prince-george.geotechnicalengineering.vip/masw/)
+- [Mat Foundations](https://prince-george.geotechnicalengineering.vip/mat-foundations/)
+- [Piles](https://prince-george.geotechnicalengineering.vip/piles/)
+- [Proctor Tests](https://prince-george.geotechnicalengineering.vip/proctor-tests/)
+- [Resistivity](https://prince-george.geotechnicalengineering.vip/resistivity/)
+- [Retaining Walls](https://prince-george.geotechnicalengineering.vip/retaining-walls/)
+- [Rigid Pavement](https://prince-george.geotechnicalengineering.vip/rigid-pavement/)
+- [Road Geotechnics](https://prince-george.geotechnicalengineering.vip/road-geotechnics/)
+- [Sand Cone Density](https://prince-george.geotechnicalengineering.vip/sand-cone-density/)
+- [Seismic](https://prince-george.geotechnicalengineering.vip/seismic/)
+- [Seismic Isolation](https://prince-george.geotechnicalengineering.vip/seismic-isolation/)
+- [Seismic Microzonation](https://prince-george.geotechnicalengineering.vip/seismic-microzonation/)
+- [Seismic Refraction](https://prince-george.geotechnicalengineering.vip/seismic-refraction/)
+- [Slope Stability](https://prince-george.geotechnicalengineering.vip/slope-stability/)
+- [Slopes](https://prince-george.geotechnicalengineering.vip/slopes/)
+- [Soft Ground Tunnels](https://prince-george.geotechnicalengineering.vip/soft-ground-tunnels/)
+- [Spt Drilling](https://prince-george.geotechnicalengineering.vip/spt-drilling/)
+- [Stone Columns](https://prince-george.geotechnicalengineering.vip/stone-columns/)
+- [Test Pits](https://prince-george.geotechnicalengineering.vip/test-pits/)
+- [Triaxial](https://prince-george.geotechnicalengineering.vip/triaxial/)
+- [Vibrocompaction](https://prince-george.geotechnicalengineering.vip/vibrocompaction/)
+
+## Contact
+- Website: https://prince-george.geotechnicalengineering.vip/
+
+## About
+This site provides geotechnical engineering services in Prince George, Canada.
+Compliant with local and international standards (ASTM, ISO, country-specific norms).
