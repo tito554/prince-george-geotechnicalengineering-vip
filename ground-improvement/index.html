@@ -239,6 +239,188 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 .crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
 .brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
+<style id="comprehensive-defaults-v1">
+/* Reset basico */
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin: 0; line-height: 1.6; color: #1E293B; background: #F8FAFC; }
+
+/* Layout wrapper */
+.layout, .main-wrapper, .content-area { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+.header, .main-header, header.main-header { background: #0F172A; color: #FFF; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+.header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.header-email { color: #FCD34D; text-decoration: none; }
+.brand, .brand-text, .brand-name { color: #FFFFFF; font-weight: 700; font-size: 1.25rem; line-height: 1.1; }
+.brand-city { color: #94A3B8; font-size: .85rem; display: block; }
+.brand-logo { display: inline-block; vertical-align: middle; }
+
+/* Breadcrumb / crumb */
+.crumb, .breadcrumb { padding: .5rem 0; font-size: .85rem; color: rgba(255,255,255,.85); }
+.crumb a, .breadcrumb a { color: #FFFFFF; text-decoration: underline; }
+.crumb a:hover, .breadcrumb a:hover { color: #FCD34D; }
+
+/* Body wrapper - layout flex */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 1.5rem; margin: 1.5rem auto; padding: 0 1.5rem; max-width: 1280px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+/* Sidebar */
+.sb-home, .sidebar, aside { background: #1E293B; color: #FFFFFF; border-radius: 10px; padding: 1rem; }
+.sb-home a, .sidebar a, aside a { color: #FFFFFF; text-decoration: none; display: block; padding: .5rem .75rem; border-radius: 6px; transition: background .15s; }
+.sb-home a:hover, .sidebar a:hover { background: rgba(255,255,255,.08); }
+.cat-row, .cat-item { display: flex; align-items: center; justify-content: space-between; padding: .4rem .75rem; }
+.cat-name { color: #FFFFFF; font-weight: 500; flex: 1; }
+.cat-toggle, .cat-arrow { background: transparent; border: 0; color: #FFFFFF; cursor: pointer; padding: .2rem .4rem; }
+.cat-sub { padding-left: 1rem; }
+.cat-sub a { font-size: .85rem; color: rgba(255,255,255,.85); padding: .3rem .75rem; }
+
+/* Block / section base */
+.block { padding: 2rem 1.5rem; }
+.block > div { max-width: 1200px; margin: 0 auto; }
+.map-block { padding: 2rem 0; background: #F1F5F9; }
+.map-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+#mapa-ciudad { width: 100%; height: 380px; border-radius: 8px; }
+
+/* Cards / grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.card { background: #FFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 1.2rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,.04); transition: all .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.08); border-color: #1D4ED8; }
+
+/* H1/H2 */
+h1 { color: #0F172A; font-size: 1.85rem; margin: 1rem 0 1.5rem; line-height: 1.2; }
+h2 { color: #1E293B; font-size: 1.35rem; margin: 1.5rem 0 .8rem; font-weight: 700; }
+h3 { color: #1E293B; font-size: 1.1rem; margin: 1rem 0 .5rem; }
+p { margin: 0 0 1rem; color: #374151; }
+a { color: #1D4ED8; }
+
+/* Mid CTA */
+.mid-cta { padding: 2rem 0; }
+.mid-cta > div { max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #1D4ED815, #1D4ED808); border-left: 4px solid #1D4ED8; padding: 1.6rem 1.8rem; border-radius: 8px; text-align: center; }
+
+/* Footer */
+footer, .footer { background: #0F172A; color: #94A3B8; padding: 1.5rem; text-align: center; margin-top: 2rem; font-size: .85rem; }
+footer a, .footer a { color: #FCD34D; }
+
+/* Authority refs */
+.authority-refs { color: #94A3B8; font-size: .8rem; }
+.updated-info { color: #94A3B8; font-size: .8rem; font-style: italic; }
+</style>
+<style id="critical-visual-fix-v1">
+/* Sidebar: ancho 260px + adaptive font size */
+.sb-home, .sidebar, aside.sidebar, aside { width: 260px !important; }
+.sb-home .cat-row, .sidebar .cat-row, aside .cat-row, .nav-cat-row { font-size: .92rem; line-height: 1.25; }
+.sb-home .cat-name, .sidebar .cat-name, .cat-name { font-size: .92rem; line-height: 1.25; word-break: keep-all; hyphens: auto; }
+/* Labels muy largos: font-size más chico */
+.cat-name:where(:has(*)),
+.cat-row a, .nav-cat-link { white-space: normal; }
+
+/* Remover email sticky position:fixed (debe estar en flow del header) */
+.header-email[style*="position:fixed"],
+.header-email[style*="position: fixed"],
+a.header-email:where([href^="mailto:"]):not(footer a):not(.mid-cta a) { position: static !important; }
+header .header-email, header a[href^="mailto:"] { position: static !important; top: auto !important; right: auto !important; }
+
+/* Brand contrast: text-shadow para legibilidad */
+.brand, .brand-name, .brand-text, .logo-text, .main-header .brand {
+  text-shadow: 0 1px 3px rgba(0,0,0,.7);
+  color: #FFFFFF !important;
+}
+
+/* Header z-index alto (sobre map/content) */
+header, .header, .main-header, .top-header { position: relative; z-index: 100; }
+
+/* Map z-index bajo (debajo de navbar) */
+#mapa-ciudad, .map-block { z-index: 1; position: relative; }
+.leaflet-pane { z-index: 2; }
+
+/* Email contacto en navbar: contraste + visibilidad */
+.header-email, header .header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-weight: 500;
+}
+
+/* Servicios card grid: no incluir folders garbage */
+.cards-grid .card[href$="/css/"],
+.cards-grid .card[href$="/js/"],
+.cards-grid .card[href$="/img/"],
+.cards-grid .card[href$="/leaflet/"] { display: none !important; }
+
+/* Hero image santiago: contain en lugar de cover */
+.hero-bg, .hero-image { object-fit: contain; }
+</style>
+<style id="critical-fix-v2">
+/* Header NO sticky en sub layouts */
+header.main-header, header[role="banner"], body > header {
+  position: static !important;
+  top: auto !important;
+}
+/* Sidebar sticky, pero start después del header (más espacio) */
+.sb-home, aside.sidebar, .sidebar {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 5 !important;
+  width: 260px !important;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+/* Header z-index alto siempre */
+header.main-header, header[role="banner"], body > header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+/* Sidebar font-size más chico en labels largos */
+.cat-name, .cat-row a, .nav-cat-link {
+  font-size: .88rem !important;
+  line-height: 1.2 !important;
+  hyphens: auto;
+  word-break: break-word;
+}
+/* Sidebar items NO superpongan header */
+.layout, .main-wrapper, .content-area { padding-top: 1rem; }
+/* Header altura mínima visible */
+header.main-header, header[role="banner"], body > header { min-height: 80px; }
+/* Brand SIEMPRE visible (no cortado) */
+.brand, .brand-name, .brand-text, .logo-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.8) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+/* Email contraste alto */
+.header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8) !important;
+  font-weight: 600;
+}
+</style>
+<style id="kill-sticky-header-v1">
+/* MATAR position:fixed legacy de fase-i-fixes */
+nav.navbar, .header-top, .main-header, header.header, .header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+body { padding-top: 0 !important; }
+
+/* Sidebar sticky pero NO encima del header */
+.sb-home, aside.sidebar, .sidebar, aside {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 2 !important;
+  width: 260px !important;
+}
+
+/* Cards en grid: layout flex/grid sin colapsar */
+.cards-grid, [style*="display:grid"][style*="auto-fill"] {
+  margin-top: 1rem !important;
+}
+
+/* Layout main: padding-top para clearance */
+main, .main-content, .content-area, .layout > *:not(aside):not(.sidebar) {
+  padding-top: 0 !important;
+}
+</style>
 </head>
 <body>
 
@@ -264,15 +446,8 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
             <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="/investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cpt-test/">CPT (Cone Penetration Test)</a></div></div><div class="cat-item" data-cat="lab-in-situ"><div class="cat-row"><a href="/lab-in-situ/" class="cat-name">In-Situ</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir In-Situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/sand-cone-density/">Field density test (sand cone method)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="/laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/atterberg-limits/">Atterberg limits</a><a href="/grain-size/">Grain size analysis (sieve + hydrometer)</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="/foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/piles/">Pile foundation design</a></div></div><div class="cat-item" data-cat="slopes"><div class="cat-row"><a href="/slopes/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/anchors/">Active/passive anchor design</a><a href="/retaining-walls/">Retaining wall design</a><a href="/slope-stability/">Slope stability analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="/ground-improvement/" class="cat-name">Improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/stone-columns/">Stone column design</a><a href="/vibrocompaction/">Vibrocompaction design</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="/seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/seismic-isolation/">Base isolation seismic design</a><a href="/seismic-microzonation/">Seismic microzonation</a><a href="/liquefaction/">Soil liquefaction analysis</a></div></div><div class="cat-item" data-cat="road-geotechnics"><div class="cat-row"><a href="/road-geotechnics/" class="cat-name">Roadway</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Roadway"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/cbr-road/">CBR study for road design</a><a href="/flexible-pavement/">Flexible pavement design</a><a href="/rigid-pavement/">Rigid pavement design</a></div></div><div class="cat-item" data-cat="excavations"><div class="cat-row"><a href="/excavations/" class="cat-name">Excavations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Excavations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="/soft-ground-tunnels/">Geotechnical analysis for soft soil tunnels</a><a href="/deep-excavations/">Geotechnical design of deep excavations</a><a href="/excavation-monitoring/">Geotechnical excavation monitoring</a></div></div></nav>
         </aside>
         <main>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/vibrocompactacion-3.webp" alt="Improvement in Prince George" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-<p>Improvement in Prince George addresses the unique geotechnical challenges posed by the region's complex glacial geology, including glaciolacustrine clays, silts, and glaciofluvial sands. These materials often exhibit low bearing capacity, high compressibility, and variable groundwater conditions, necessitating reliable intervention before construction. A comprehensive approach begins with a rigorous <a href="/investigation/">geotechnical investigation</a> to characterize the subsurface profile and identify potential hazards. Adhering to the BC Building Code and national standards such as CSA A23.1 for concrete and the Canadian Foundation Engineering Manual (CFEM), our methodology ensures that all Improvement strategies are aligned with local regulatory requirements and the specific seismic considerations of the region.</p>
-<p>Our field methodology relies on quantitative In-Situ to select and verify the appropriate Improvement technique, whether it involves deep dynamic compaction, vibro-replacement, or rigid inclusions. We deploy the <a href="/cpt-test/">Cone Penetration Test (CPT)</a> to gain continuous, high-resolution data on soil stratigraphy and pore pressure dissipation, which is critical for designing densification or drainage solutions. This is complemented by <a href="/lab-in-situ/">In-Situ</a> programs, including shear vane and pressuremeter tests, executed according to ASTM and CSA standards. To confirm the effectiveness of shallow compaction efforts, we perform <a href="/sand-cone-density/">field density testing using the sand cone method</a>, delivering immediate, accurate in-place density values that validate compliance with project specifications for engineered fills and subgrade preparation.</p>
-<p>Typical projects in Prince George, from industrial warehouse platforms along the Fraser-Fort George industrial corridor to residential subdivisions on the city’s benchlands, demand tailored Improvement to mitigate differential settlement and increase allowable bearing pressures. For sites underlain by soft, compressible clays, preloading with vertical drains—designed using consolidation parameters from our <a href="/laboratory/">laboratory testing</a>—is a common solution. The characterization of these fine-grained soils is refined through index tests such as <a href="/atterberg-limits/">Atterberg limits</a>, which define the plasticity range and predict behavioral changes with moisture fluctuation, directly informing the selection of stabilization agents like lime or cement. These integrated services ensure that foundation support systems are optimized for the long-term performance of both shallow and deep foundations.</p>
-<img src="/img/columnas-grava-5.webp" alt="Improvement in Prince George" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
-
-<p>Our process delivers a definitive Improvement design package that moves from thorough site characterization to execution and validation. It begins with sampling and advanced laboratory analysis, including <a href="/grain-size/">grain size analysis by sieve and hydrometer</a>, to produce a complete particle-size distribution curve essential for designing grouting programs or aggregate pier gradations. The final deliverable is a concise, actionable report containing site-specific recommendations, quality control protocols, and as-built verification data. By integrating local geological insight with advanced testing, we provide a value proposition centered on risk reduction: transforming problematic native soils into competent, engineered ground that provides a safe, cost-effective substrate for robust <a href="/foundations/">foundations</a>, thereby preventing costly over-excavation or future structural distress.</p></div></section>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../stone-columns/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Stone column design</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../vibrocompaction/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Vibrocompaction design</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>Soil improvement comprises a set of techniques aimed at modifying the mechanical, hydraulic or strength properties of the ground, allowing construction on soils that originally would not meet design requirements. Its application is common in zones with soft, loose, expansive, collapsible soils or those with liquefaction potential under seismic loading.</p><p>Densification techniques include vibrocompaction for granular soils (improves relative density), dynamic compaction through controlled mass drop, and stone columns (vibroreplacement) which provide reinforcement and vertical drainage. Their effectiveness is verified through SPT, CPT tests and settlement measurements during and post-treatment.</p><p>Grouting (jet grouting, permeation, compaction grouting) modifies soil through cementitious, chemical or resin slurries that fill voids, increase strength and reduce permeability. Applications include excavation support, impermeable cutoffs, improvement of existing foundations and consolidation of collapsible or soft terrains.</p><p>Accelerated drainage techniques (prefabricated vertical drains, sand drains) reduce consolidation times in saturated cohesive soils, complemented with static surcharge. Monitoring of settlements, pore pressures and lateral deformations through specific instrumentation allows validation of acceptance criteria compliance and proceeding with construction on improved soil.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../stone-columns/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Stone column design</h3><span style="font-size:.85rem;color:#666">→ View details</span></a><a href="../grouting/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)"><div style="font-weight:700;margin-bottom:.4rem;color:#1E293B">Grouting</div><div style="color:#64748b;font-size:.85rem">→ View details</div></a></div></div></section>
 
     <section class="block mid-cta-6265" style="padding:2rem 0">
       <div style="max-width:720px;margin:0 auto;background:linear-gradient(135deg,#b91c1c15,#b91c1c08);border-left:4px solid #b91c1c;padding:1.6rem 1.8rem;border-radius:8px;text-align:center">
